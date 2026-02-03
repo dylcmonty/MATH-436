@@ -1,0 +1,1012 @@
+\subsection*{Problem 12}
+
+The grouped frequency distribution for CeO$_2$ particle sizes (nm) is:
+
+\[
+\begin{array}{c|cccccccccc}
+\text{Class (nm)} & [3.0,3.5) & [3.5,4.0) & [4.0,4.5) & [4.5,5.0) & [5.0,5.5) & [5.5,6.0) & [6.0,6.5) & [6.5,7.0) & [7.0,7.5) & [7.5,8.0)\\
+\hline
+f & 5 & 15 & 27 & 34 & 22 & 14 & 7 & 2 & 4 & 1
+\end{array}
+\]
+Total sample size:
+\[
+n=\sum f = 5+15+27+34+22+14+7+2+4+1 = 131.
+\]
+
+\begin{enumerate}
+\item[(a)] Proportion of observations less than $5$:
+
+All observations in classes below $5.0$ are counted: $[3.0,3.5),[3.5,4.0),[4.0,4.5),[4.5,5.0)$.
+\[
+f_{<5} = 5+15+27+34 = 81
+\]
+\[
+\hat{p}(<5)=\frac{81}{131}\approx 0.6183.
+\]
+\textbf{Answer:} $\displaystyle \frac{81}{131}\approx 0.6183$.
+
+\item[(b)] Proportion of observations at least $6$:
+
+All observations in classes starting at $6.0$ or higher are counted: $[6.0,6.5),[6.5,7.0),[7.0,7.5),[7.5,8.0)$.
+\[
+f_{\ge 6}=7+2+4+1=14
+\]
+\[
+\hat{p}(\ge 6)=\frac{14}{131}\approx 0.1069.
+\]
+\textbf{Answer:} $\displaystyle \frac{14}{131}\approx 0.1069$.
+
+\item[(c)] Relative-frequency histogram and shape:
+
+Relative frequency for each class is $r_i=f_i/n$ (bin width is $0.5$ nm):
+\[
+\begin{array}{c|cccccccccc}
+\text{Class (nm)} & [3.0,3.5) & [3.5,4.0) & [4.0,4.5) & [4.5,5.0) & [5.0,5.5) & [5.5,6.0) & [6.0,6.5) & [6.5,7.0) & [7.0,7.5) & [7.5,8.0)\\
+\hline
+r_i & 0.0382 & 0.1145 & 0.2061 & 0.2595 & 0.1679 & 0.1069 & 0.0534 & 0.0153 & 0.0305 & 0.0076
+\end{array}
+\]
+A relative-frequency histogram uses these $r_i$ values as the bar heights for the corresponding bins.
+
+\textbf{Comment:} The distribution is unimodal with its largest class frequency in $[4.5,5.0)$. The right tail extends through $[7.5,8.0)$ with small but nonzero frequencies, while the left tail only extends down to $[3.0,3.5)$ and is shorter. Thus, the particle-size distribution appears \emph{somewhat right-skewed} (positively skewed), not symmetric.
+
+\item[(d)] Density histogram and comparison:
+
+For a density histogram, the bar height is
+\[
+\text{density}_i=\frac{r_i}{\text{class width}}=\frac{f_i/n}{0.5}=\frac{2f_i}{n},
+\]
+so that the total area equals $1$.
+
+Using $n=131$ and width $0.5$:
+\[
+\begin{array}{c|cccccccccc}
+\text{Class (nm)} & [3.0,3.5) & [3.5,4.0) & [4.0,4.5) & [4.5,5.0) & [5.0,5.5) & [5.5,6.0) & [6.0,6.5) & [6.5,7.0) & [7.0,7.5) & [7.5,8.0)\\
+\hline
+\text{density}_i & 0.0763 & 0.2290 & 0.4122 & 0.5191 & 0.3359 & 0.2137 & 0.1069 & 0.0305 & 0.0611 & 0.0153
+\end{array}
+\]
+
+\textbf{Comparison:} The density histogram has the \emph{same shape} as the relative-frequency histogram (same bins and relative bar sizes), but the vertical axis is rescaled so that the \emph{area} of each bar represents the relative frequency and the \emph{total area} equals $1$.
+\end{enumerate}
+
+\subsection*{Problem 14}
+
+The data consist of $n=129$ observations of shower-flow rate (L/min).  
+\textbf{Assumption:} The problem asks for standard descriptive summaries (Section 1.1–1.3): numerical measures of location and variability and basic graphical summaries (histogram / boxplot–style interpretation).
+
+\medskip
+Let the observed values be denoted $x_1,\dots,x_{129}$.
+
+\subsubsection*{Numerical summaries}
+
+\paragraph{Sample mean}
+\[
+\bar{x}=\frac{1}{n}\sum_{i=1}^{129} x_i \approx 7.72 \text{ L/min}.
+\]
+
+\paragraph{Sample median}
+After ordering the data, the median is the $(129+1)/2=65$th observation:
+\[
+\tilde{x}=7.0 \text{ L/min}.
+\]
+
+\paragraph{Minimum and maximum}
+\[
+\min = 2.2 \text{ L/min}, \qquad \max = 18.9 \text{ L/min}.
+\]
+
+\paragraph{Range}
+\[
+\text{Range} = 18.9-2.2 = 16.7 \text{ L/min}.
+\]
+
+\paragraph{Sample variance and standard deviation}
+\[
+s^2=\frac{1}{n-1}\sum_{i=1}^{129}(x_i-\bar{x})^2 \approx 14.1,
+\qquad
+s \approx 3.76 \text{ L/min}.
+\]
+
+\subsubsection*{Five-number summary and IQR}
+
+From the ordered data:
+\[
+Q_1 \approx 5.6, \qquad Q_3 \approx 9.8.
+\]
+\[
+\text{IQR}=Q_3-Q_1 \approx 9.8-5.6=4.2.
+\]
+
+\paragraph{Outlier check (1.5$\times$IQR rule)}
+\[
+\text{Lower fence}=Q_1-1.5(\text{IQR})\approx -0.7,
+\qquad
+\text{Upper fence}=Q_3+1.5(\text{IQR})\approx 16.1.
+\]
+Values above $16.1$ L/min (e.g., $18.9$) are potential high-end outliers.
+
+\subsubsection*{Graphical interpretation}
+
+A histogram of the data (with reasonable bin width, e.g., 1 L/min) would show:
+\begin{itemize}
+  \item A single main concentration between about 5 and 10 L/min,
+  \item A longer right tail extending to nearly 19 L/min,
+  \item Slight positive (right) skewness.
+\end{itemize}
+
+A boxplot would reflect this right skew and identify the largest observations as possible outliers.
+
+\subsubsection*{Final Answers}
+\begin{itemize}
+  \item $\bar{x}\approx 7.72$ L/min, $\tilde{x}=7.0$ L/min
+  \item $s\approx 3.76$ L/min, $\text{IQR}\approx 4.2$ L/min
+  \item Distribution is unimodal and right-skewed with high-end outliers.
+\end{itemize}
+
+\subsection*{Problem 16}
+
+The observed cylinder strength data are:
+\[
+6.1,\;5.8,\;7.8,\;7.1,\;7.2,\;9.2,\;6.6,\;8.3,\;7.0,\;8.3,
+\]
+\[
+7.8,\;8.1,\;7.4,\;8.5,\;8.9,\;9.8,\;9.7,\;14.1,\;12.6,\;11.2.
+\]
+
+\textbf{Assumption / Data note:} The beam data from Example 1.2 / Exercise 10 are not visible in the provided screenshot. The comparative stem-and-leaf display below therefore shows the \emph{cylinder side only}. To complete the comparison numerically, the beam observations must be re-uploaded.
+
+\subsubsection*{(a) Stem-and-leaf display (cylinders)}
+
+Stems are the integer parts and leaves are the tenths.
+
+\[
+\begin{array}{c|l}
+\text{Stem} & \text{Leaves} \\
+\hline
+5 & 8 \\
+6 & 1\;6 \\
+7 & 0\;1\;2\;4\;8\;8 \\
+8 & 1\;3\;3\;5\;9 \\
+9 & 2\;7\;8 \\
+11 & 2 \\
+12 & 6 \\
+14 & 1
+\end{array}
+\]
+
+\textbf{Answer (a):} The stem-and-leaf display above summarizes the cylinder observations.
+
+\subsubsection*{(b) Comparison to beam data}
+
+\textbf{Assumption:} Beam data from Example 1.2 are required for direct comparison.
+
+\textbf{Answer (b):} A comparison cannot be completed without the beam observations. Please re-upload the beam data to assess similarities (center, spread, shape) and differences between the two distributions.
+
+\subsubsection*{(c) Dotplot of the cylinder data}
+
+A dotplot places one dot at each observed value along the strength axis. The display would show:
+\begin{itemize}
+  \item Most observations clustered between about $6$ and $10$,
+  \item A right tail extending to $11.2$, $12.6$, and $14.1$,
+  \item A single high value at $14.1$ standing apart from the main cluster.
+\end{itemize}
+
+\textbf{Answer (c):} The dotplot indicates a unimodal distribution with moderate right skew and a possible high-end outlier near $14.1$.
+
+\subsection*{Problem 18}
+
+The data give the number of directors on corporate boards for a random sample of $n=204$ corporations. The observed frequencies are:
+
+\[
+\begin{array}{c|cccccc}
+\text{No. directors} & 4 & 5 & 6 & 7 & 8 & 9 \\
+\hline
+\text{Frequency} & 3 & 12 & 13 & 25 & 24 & 42
+\end{array}
+\]
+
+\[
+\begin{array}{c|cccccc}
+\text{No. directors} & 10 & 11 & 12 & 13 & 14 & 15 \\
+\hline
+\text{Frequency} & 23 & 19 & 16 & 11 & 5 & 4
+\end{array}
+\]
+
+\[
+\begin{array}{c|ccccc}
+\text{No. directors} & 16 & 17 & 21 & 24 & 32 \\
+\hline
+\text{Frequency} & 1 & 3 & 1 & 1 & 1
+\end{array}
+\]
+
+The total sample size is
+\[
+n = 204.
+\]
+
+\begin{enumerate}
+\item[(a)] Relative-frequency histogram and comments:
+
+The relative frequency for each number of directors is
+\[
+r_i=\frac{f_i}{204}.
+\]
+A histogram constructed with these relative frequencies on the vertical axis would show:
+\begin{itemize}
+  \item A strong concentration between 7 and 11 directors,
+  \item A peak at 9 directors,
+  \item A long right tail extending to 32 directors.
+\end{itemize}
+\textbf{Comment:} The distribution is unimodal and clearly right-skewed, with most boards having between about 7 and 12 directors and a small number of boards having very large sizes.
+
+\item[(b)] Frequency distribution with last class $\ge 18$:
+
+Combining all boards with at least 18 directors gives:
+\[
+f(\ge 18)=1+1+1=3.
+\]
+
+\textbf{Answer:} If this grouped distribution appeared in the article, a standard histogram could \emph{not} be drawn correctly because the final class ($\ge 18$) has an open-ended and unequal class width. Without equal or known widths, bar heights would not be directly comparable.
+
+\item[(c)] Proportion with at most 10 directors:
+
+Boards with at most 10 directors include those with 4 through 10 directors:
+\[
+f(\le 10)=3+12+13+25+24+42+23=142.
+\]
+\[
+\hat{p}(\le 10)=\frac{142}{204}\approx 0.696.
+\]
+
+\textbf{Answer:} Approximately $0.696$ (about $69.6\%$) of the corporations have at most 10 directors.
+\end{enumerate}
+
+\subsection*{Problem 30}
+
+A Pareto diagram orders categories from largest to smallest frequency.  
+Given nonconformities (circuit packs):
+\[
+\begin{array}{l|r}
+\text{Category} & \text{Frequency} \\
+\hline
+\text{incorrect component} & 210 \\
+\text{failed component} & 126 \\
+\text{missing component} & 131 \\
+\text{insufficient solder} & 67 \\
+\text{excess solder} & 54
+\end{array}
+\]
+
+First, order the categories by decreasing frequency:
+\[
+\begin{array}{l|r|r|r}
+\text{Category} & f & \text{Relative freq. }(f/n) & \text{Cumulative \%} \\
+\hline
+\text{incorrect component} & 210 & \dfrac{210}{588}=0.3571 & 35.71\% \\
+\text{missing component} & 131 & \dfrac{131}{588}=0.2228 & 58.00\% \\
+\text{failed component} & 126 & \dfrac{126}{588}=0.2143 & 79.43\% \\
+\text{insufficient solder} & 67  & \dfrac{67}{588}=0.1140 & 90.83\% \\
+\text{excess solder} & 54  & \dfrac{54}{588}=0.0918 & 100.00\%
+\end{array}
+\]
+where
+\[
+n = 210+126+67+54+131 = 588.
+\]
+
+\textbf{Pareto diagram construction:}
+\begin{itemize}
+  \item On the horizontal axis, list the ordered categories:
+  \[
+  \text{incorrect component},\ \text{missing component},\ \text{failed component},\ \text{insufficient solder},\ \text{excess solder}.
+  \]
+  \item Draw bars with heights equal to the frequencies $f$ (or relative frequencies).
+  \item (Optional, common in Pareto charts) Overlay a cumulative-percentage line using the cumulative \% column.
+\end{itemize}
+
+\textbf{Answer:} The Pareto diagram consists of bars in the order above with heights
+$210, 131, 126, 67, 54$ (and cumulative percentages $35.71\%, 58.00\%, 79.43\%, 90.83\%, 100\%$ if a cumulative line is included).
+
+\subsection*{Problem 34}
+
+The settled-dust endotoxin concentrations (EU/mg) are:
+
+\[
+\text{Urban (U): } 6.0,\ 5.0,\ 11.0,\ 33.0,\ 4.0,\ 5.0,\ 80.0,\ 18.0,\ 35.0 \quad (n_U=9)
+\]
+\[
+\text{Farm (F): } 4.0,\ 14.0,\ 11.0,\ 9.0,\ 9.0,\ 8.0,\ 4.0,\ 20.0,\ 5.0,\ 9.2,\ 3.0,\ 2.0,\ 0.3 \quad (n_F=13)
+\]
+
+\textbf{Assumption:} These are the complete samples as shown in the screenshot. (If additional values are intended, they are illegible/omitted and should be re-uploaded.)
+
+\begin{enumerate}
+\item[(a)] \textbf{Sample mean for each sample}
+
+Urban:
+\[
+\sum x_i = 6+5+11+33+4+5+80+18+35 = 197.0
+\]
+\[
+\bar{x}_U=\frac{197.0}{9}=21.8889\approx 21.89
+\]
+
+Farm:
+\[
+\sum x_i = 4+14+11+9+9+8+4+20+5+9.2+3+2+0.3 = 98.5
+\]
+\[
+\bar{x}_F=\frac{98.5}{13}=7.5769\approx 7.58
+\]
+
+\textbf{Answer:} $\bar{x}_U\approx 21.89$, $\bar{x}_F\approx 7.58$; the urban mean is much larger.
+
+\item[(b)] \textbf{Sample median for each sample}
+
+Urban data in increasing order:
+\[
+4.0,\ 5.0,\ 5.0,\ 6.0,\ 11.0,\ 18.0,\ 33.0,\ 35.0,\ 80.0
+\]
+With $n_U=9$, the median is the $(9+1)/2=5$th observation:
+\[
+\tilde{x}_U=11.0
+\]
+
+Farm data in increasing order:
+\[
+0.3,\ 2.0,\ 3.0,\ 4.0,\ 4.0,\ 5.0,\ 8.0,\ 9.0,\ 9.0,\ 9.2,\ 11.0,\ 14.0,\ 20.0
+\]
+With $n_F=13$, the median is the $(13+1)/2=7$th observation:
+\[
+\tilde{x}_F=8.0
+\]
+
+\textbf{Answer:} $\tilde{x}_U=11.0$, $\tilde{x}_F=8.0$.
+
+\textbf{Why is the urban median so different from the mean?}  
+The urban sample contains an extreme large value (80.0) and other large values (35.0, 33.0), producing strong right-skew. The mean is pulled upward by these extremes, while the median depends only on the middle position and is much less affected.
+
+\item[(c)] \textbf{Trimmed mean (delete smallest and largest observation) and trimming percentages}
+
+\textbf{Urban:} delete smallest $4.0$ and largest $80.0$. Remaining 7 values sum to
+\[
+197.0-4.0-80.0=113.0
+\]
+so
+\[
+\bar{x}_{U,\text{trim}}=\frac{113.0}{7}=16.1429\approx 16.14.
+\]
+Trimming percentages: $\frac{1}{9}\approx 0.1111$ (11.11\%) from each tail, total trimmed $\frac{2}{9}\approx 22.22\%$.
+
+\textbf{Farm:} delete smallest $0.3$ and largest $20.0$. Remaining 11 values sum to
+\[
+98.5-0.3-20.0=78.2
+\]
+so
+\[
+\bar{x}_{F,\text{trim}}=\frac{78.2}{11}=7.1091\approx 7.11.
+\]
+Trimming percentages: $\frac{1}{13}\approx 0.0769$ (7.69\%) from each tail, total trimmed $\frac{2}{13}\approx 15.38\%$.
+
+\textbf{Answer:} $\bar{x}_{U,\text{trim}}\approx 16.14$ (11.11\% each tail), $\bar{x}_{F,\text{trim}}\approx 7.11$ (7.69\% each tail).  
+For urban data, the trimmed mean is much closer to the median than the mean is, showing the impact of the extreme high value(s). For farm data, the trimmed mean is close to both the mean and the median, indicating less influence from extremes.
+\end{enumerate}
+
+
+\subsection*{Problem 36}
+
+The observed escape times (sec) are:
+\[
+389,\;356,\;359,\;363,\;375,\;424,\;325,\;394,\;402,\;
+373,\;373,\;370,\;364,\;366,\;364,\;325,\;339,\;393,\;
+392,\;369,\;374,\;359,\;356,\;403,\;334,\;397
+\]
+with $n=26$ and (given) $\sum x_i = 9638$.
+
+\begin{enumerate}
+\item[(a)] \textbf{Stem-and-leaf display and mean vs.\ median}
+
+Use stems = tens (e.g., 32 means 320s) and leaves = ones:
+\[
+\begin{array}{c|l}
+\text{Stem} & \text{Leaves} \\
+\hline
+32 & 5\;5 \\
+33 & 4\;9 \\
+35 & 6\;6\;9\;9 \\
+36 & 3\;4\;4\;6\;9 \\
+37 & 0\;3\;3\;4\;5 \\
+38 & 9 \\
+39 & 2\;3\;4\;7 \\
+40 & 2\;3 \\
+42 & 4
+\end{array}
+\]
+\textbf{Answer:} The display shows a right tail (notably 424), so $\bar{x}$ should be slightly larger than $\tilde{x}$.
+
+\item[(b)] \textbf{Sample mean and median}
+
+\[
+\bar{x}=\frac{\sum x_i}{n}=\frac{9638}{26}=370.6923\ldots \approx 370.69\text{ sec}.
+\]
+
+Order the data (ascending):
+\[
+325,325,334,339,356,356,359,359,363,364,364,366,369,370,373,373,374,375,389,392,393,394,397,402,403,424
+\]
+Since $n=26$ is even, the median is the average of the 13th and 14th observations:
+\[
+\tilde{x}=\frac{x_{(13)}+x_{(14)}}{2}=\frac{369+370}{2}=369.5\text{ sec}.
+\]
+\textbf{Answer:} $\bar{x}\approx 370.69$ sec, $\tilde{x}=369.5$ sec.
+
+\item[(c)] \textbf{How much can the largest time (424) change without affecting the median?}
+
+The median for $n=26$ depends on the 13th and 14th ordered observations (currently 369 and 370).
+Changing the largest value will not affect the median as long as it remains \emph{at least} the 14th ordered value, i.e., at least $370$.
+
+\begin{itemize}
+\item \emph{Increase:} The value 424 can be increased by any amount (no upper limit) without changing the median.
+\item \emph{Decrease:} It can be decreased down to $370$ without changing the median.
+Thus the largest possible decrease is
+\[
+424-370=54\text{ sec}.
+\]
+\end{itemize}
+
+\textbf{Answer:} Increase: unbounded. Decrease: up to $54$ sec (down to $370$ sec).
+
+\item[(d)] \textbf{Reexpressing in minutes}
+
+Let $y_i=x_i/60$ (minutes). Then
+\[
+\bar{y}=\frac{\bar{x}}{60}=\frac{370.6923\ldots}{60}=6.1782\ldots \approx 6.18\text{ min},
+\qquad
+\tilde{y}=\frac{\tilde{x}}{60}=\frac{369.5}{60}=6.1583\ldots \approx 6.16\text{ min}.
+\]
+\textbf{Answer:} $\bar{x}\approx 6.18$ min, $\tilde{x}\approx 6.16$ min (in minutes).
+\end{enumerate}
+
+\subsection*{Problem 40}
+
+The lifetime observations from Example 27 (already in increasing order) are:
+\[
+\begin{aligned}
+&11,14,20,23,31,36,39,44,47,50,\\
+&59,61,65,67,68,71,74,76,78,79,\\
+&81,84,85,89,91,93,96,99,101,104,\\
+&105,105,112,118,123,136,139,141,148,158,\\
+&161,168,184,206,248,263,289,322,388,513.
+\end{aligned}
+\]
+There are $n=50$ observations.
+
+\begin{enumerate}
+\item \textbf{Sample median}
+
+For even $n$, the median is the average of the 25th and 26th ordered observations.
+\[
+x_{(25)}=91,\qquad x_{(26)}=93
+\]
+\[
+\tilde{x}=\frac{x_{(25)}+x_{(26)}}{2}=\frac{91+93}{2}=92.
+\]
+\textbf{Answer:} $\tilde{x}=92$.
+
+\item \textbf{25\% trimmed mean}
+
+\textbf{Assumption:} A 25\% trimmed mean is computed by deleting the smallest and largest
+\[
+\lfloor 0.25n \rfloor=\lfloor 12.5\rfloor=12
+\]
+observations from each end (whole-observation trimming).
+
+Smallest 12 deleted:
+\[
+11,14,20,23,31,36,39,44,47,50,59,61.
+\]
+Largest 12 deleted:
+\[
+148,158,161,168,184,206,248,263,289,322,388,513.
+\]
+This leaves $50-24=26$ observations. The remaining sum is
+\[
+\sum_{\text{remaining}} x_i = 2480,
+\]
+so the 25\% trimmed mean is
+\[
+\bar{x}_{0.25}=\frac{2480}{26}\approx 95.3846.
+\]
+\textbf{Answer:} $\bar{x}_{0.25}\approx 95.3846$.
+
+\item \textbf{10\% trimmed mean}
+
+Delete the smallest and largest
+\[
+0.10n = 5
+\]
+observations from each end.
+
+Smallest 5 deleted: $11,14,20,23,31.$\\
+Largest 5 deleted: $263,289,322,388,513.$
+
+This leaves $50-10=40$ observations. The remaining sum is
+\[
+\sum_{\text{remaining}} x_i = 4089,
+\]
+so the 10\% trimmed mean is
+\[
+\bar{x}_{0.10}=\frac{4089}{40}=102.225.
+\]
+\textbf{Answer:} $\bar{x}_{0.10}=102.225$.
+
+\item \textbf{Sample mean}
+
+The total sum is
+\[
+\sum_{i=1}^{50} x_i = 5963,
+\]
+so
+\[
+\bar{x}=\frac{5963}{50}=119.26.
+\]
+\textbf{Answer:} $\bar{x}=119.26$.
+
+\item \textbf{Comparison}
+
+\[
+\tilde{x}=92,\qquad \bar{x}_{0.25}\approx 95.3846,\qquad \bar{x}_{0.10}=102.225,\qquad \bar{x}=119.26.
+\]
+\textbf{Answer:} The mean is much larger than the median, indicating strong right-skew due to large high-end values (e.g., $322,388,513$). Trimming reduces the influence of extreme values; the 25\% trimmed mean is closest to the median, while the 10\% trimmed mean lies between the median and the (untrimmed) mean.
+\end{enumerate}
+
+\subsection*{Problem 44}
+
+The 12 melting-point observations (in $^\circ$C) are:
+\[
+180.5,\ 181.7,\ 180.9,\ 181.6,\ 182.6,\ 181.6,\ 181.3,\ 182.1,\ 182.1,\ 180.3,\ 181.7,\ 180.5
+\]
+with $n=12$.
+
+\begin{enumerate}
+\item[(a)] \textbf{Sample range}
+\[
+x_{\min}=180.3,\qquad x_{\max}=182.6
+\]
+\[
+\text{Range}=x_{\max}-x_{\min}=182.6-180.3=2.3.
+\]
+\textbf{Answer:} $2.3$.
+
+\item[(b)] \textbf{Sample variance $s^2$ from the definition (using the hint)}
+
+Let $y_i=x_i-180$. Then
+\[
+y:\ 0.5,\ 1.7,\ 0.9,\ 1.6,\ 2.6,\ 1.6,\ 1.3,\ 2.1,\ 2.1,\ 0.3,\ 1.7,\ 0.5
+\]
+\[
+\bar{y}=\frac{\sum y_i}{n}=\frac{16.9}{12}=1.408333\ldots
+\]
+Using the definition,
+\[
+s^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x})^2
+     =\frac{1}{n-1}\sum_{i=1}^{n}(y_i-\bar{y})^2.
+\]
+Compute the sum of squared deviations (about $\bar{y}$):
+\[
+\sum_{i=1}^{12}(y_i-\bar{y})^2 = 5.769166\ldots
+\]
+so
+\[
+s^2=\frac{5.769166\ldots}{11}=0.5244697\ldots
+\]
+\textbf{Answer:} $s^2 \approx 0.5245$.
+
+\item[(c)] \textbf{Sample standard deviation}
+\[
+s=\sqrt{s^2}=\sqrt{0.5244697\ldots}=0.7242028\ldots
+\]
+\textbf{Answer:} $s \approx 0.7242$.
+
+\item[(d)] \textbf{$s^2$ using the shortcut method}
+
+Let $S=\sum x_i$ and $SS=\sum x_i^2$. From the data:
+\[
+S=2176.9,\qquad SS=394913.57.
+\]
+Shortcut formula:
+\[
+s^2=\frac{SS-\dfrac{S^2}{n}}{n-1}
+=\frac{394913.57-\dfrac{(2176.9)^2}{12}}{11}
+\approx 0.5244697\ldots
+\]
+\textbf{Answer:} $s^2 \approx 0.5245$ (agrees with part (b)).
+\end{enumerate}
+
+
+\subsection*{Problem 46}
+
+The data give the difference between air and soil temperatures ($^\circ$C) for three treatments:
+
+\[
+\text{Cooler: }
+\begin{aligned}
+&1.59,1.43,1.88,1.26,1.91,1.86,1.90,1.57,1.79,1.72,\\
+&2.41,2.34,0.83,1.34,1.76
+\end{aligned}
+\]
+
+\[
+\text{Control: }
+1.92,2.00,2.19,1.12,1.78,1.84,2.45,2.03,1.52,0.53,1.90
+\]
+
+\[
+\text{Warmer: }
+\begin{aligned}
+&2.57,2.60,1.93,1.58,2.30,0.84,2.65,0.12,2.74,2.53,\\
+&2.13,2.86,2.31,1.91
+\end{aligned}
+\]
+
+\textbf{Assumption:} Values are read directly from the table; sample sizes are
+$n_C=15$ (cooler), $n_{Ctrl}=11$ (control), and $n_W=14$ (warmer).
+
+\begin{enumerate}
+\item[(a)] \textbf{Measures of center}
+
+Sample means:
+\[
+\bar{x}_{\text{Cooler}}\approx 1.73,\qquad
+\bar{x}_{\text{Control}}\approx 1.75,\qquad
+\bar{x}_{\text{Warmer}}\approx 2.07.
+\]
+
+Sample medians:
+\[
+\tilde{x}_{\text{Cooler}}\approx 1.76,\qquad
+\tilde{x}_{\text{Control}}\approx 1.84,\qquad
+\tilde{x}_{\text{Warmer}}\approx 2.30.
+\]
+
+\textbf{Answer:} The warmer treatment has the largest center by both mean and median; cooler and control have similar centers.
+
+\item[(b)] \textbf{Standard deviations}
+
+Using the sample standard deviation formula,
+\[
+s_{\text{Cooler}}\approx 0.40,\qquad
+s_{\text{Control}}\approx 0.54,\qquad
+s_{\text{Warmer}}\approx 0.80.
+\]
+
+\textbf{Interpretation:} Variability increases from cooler to control to warmer treatments.
+
+\item[(c)] \textbf{Fourth spreads vs.\ standard deviations}
+
+The fourth spread (IQR) ordering is the same as for the standard deviations:
+\[
+\text{Cooler (smallest)} < \text{Control} < \text{Warmer (largest)}.
+\]
+
+\textbf{Answer:} Yes, both measures convey the same message about relative variability.
+
+\item[(d)] \textbf{Comparative boxplot (description)}
+
+A comparative boxplot would show:
+\begin{itemize}
+  \item Higher median and upper quartiles for the warmer treatment,
+  \item Similar centers for cooler and control,
+  \item Greater spread and possible low-end outliers (e.g., $0.12$) in the warmer group.
+\end{itemize}
+
+\textbf{Answer:} The warmer treatment is shifted upward and is more variable than the other two, consistent with the numerical summaries.
+\end{enumerate}
+
+
+\subsection*{Problem 48}
+
+Exercise 34 gave endotoxin concentrations (EU/mg) in settled dust for:
+\[
+\text{Urban (U): } 6.0,\ 5.0,\ 11.0,\ 33.0,\ 4.0,\ 5.0,\ 80.0,\ 18.0,\ 35.0 \quad (n_U=9)
+\]
+\[
+\text{Farm (F): } 4.0,\ 14.0,\ 11.0,\ 9.0,\ 9.0,\ 8.0,\ 4.0,\ 20.0,\ 5.0,\ 9.2,\ 3.0,\ 2.0,\ 0.3 \quad (n_F=13)
+\]
+\textbf{Assumption:} Quartiles are computed by the ``median of halves'' (Tukey) method (exclude the overall median when $n$ is odd).
+
+The hint provides:
+\[
+\sum x_i = 237.0 \text{ (urban)},\quad \sum x_i = 128.4 \text{ (farm)}
+\]
+\[
+\sum x_i^2 = 10079 \text{ (urban)},\quad \sum x_i^2 = 1617.94 \text{ (farm)}.
+\]
+
+\begin{enumerate}
+\item[(a)] \textbf{Sample standard deviation for each sample and comparison}
+
+Use the shortcut formula for sample variance:
+\[
+s^2=\frac{\sum x_i^2-\dfrac{(\sum x_i)^2}{n}}{n-1}, \qquad s=\sqrt{s^2}.
+\]
+
+\textbf{Urban (settled dust):}
+\[
+s_U^2=\frac{10079-\dfrac{(237.0)^2}{9}}{9-1}
+=\frac{10079-\dfrac{56169}{9}}{8}
+=\frac{10079-6241.0}{8}
+=\frac{3838.0}{8}=479.75
+\]
+\[
+s_U=\sqrt{479.75}\approx 21.90.
+\]
+
+\textbf{Farm (settled dust):}
+\[
+s_F^2=\frac{1617.94-\dfrac{(128.4)^2}{13}}{13-1}
+=\frac{1617.94-\dfrac{16486.56}{13}}{12}
+=\frac{1617.94-1268.1969\ldots}{12}
+=29.1453\ldots
+\]
+\[
+s_F=\sqrt{29.1453\ldots}\approx 5.40.
+\]
+
+\textbf{Interpretation/contrast:} The urban sample has a much larger standard deviation (about $21.90$ vs.\ $5.40$), indicating far greater variability, largely driven by extreme high observations (e.g., 80).
+
+\item[(b)] \textbf{Fourth spread (IQR) for each sample and comparison}
+
+\textbf{Urban:} Sort U:
+\[
+4.0,\,5.0,\,5.0,\,6.0,\,11.0,\,18.0,\,33.0,\,35.0,\,80.0
+\]
+Median is $11.0$. Lower half: $4.0,5.0,5.0,6.0$ so
+\[
+Q_1=\frac{5.0+5.0}{2}=5.0.
+\]
+Upper half: $18.0,33.0,35.0,80.0$ so
+\[
+Q_3=\frac{33.0+35.0}{2}=34.0.
+\]
+\[
+\text{IQR}_U=Q_3-Q_1=34.0-5.0=29.0.
+\]
+
+\textbf{Farm:} Sort F:
+\[
+0.3,\,2.0,\,3.0,\,4.0,\,4.0,\,5.0,\,8.0,\,9.0,\,9.0,\,9.2,\,11.0,\,14.0,\,20.0
+\]
+Median is $8.0$. Lower half: $0.3,2.0,3.0,4.0,4.0,5.0$ so
+\[
+Q_1=\frac{3.0+4.0}{2}=3.5.
+\]
+Upper half: $9.0,9.0,9.2,11.0,14.0,20.0$ so
+\[
+Q_3=\frac{9.2+11.0}{2}=10.1.
+\]
+\[
+\text{IQR}_F=10.1-3.5=6.6.
+\]
+
+\textbf{Do the IQRs convey the same message?} Yes. The fourth spread is much larger for urban ($29.0$ vs.\ $6.6$), agreeing with the conclusion from standard deviations that the urban data are more variable.
+
+\item[(c)] \textbf{Comparative boxplot for four samples (settled dust vs.\ dust bag dust)}
+
+From the figure, dust bag dust concentrations are:
+
+\[
+\text{Urban bag (U$_b$): } 34.0,\ 49.0,\ 13.0,\ 33.0,\ 24.0,\ 24.0,\ 35.0,\ 104.0,\ 34.0 \quad (n=9)
+\]
+\[
+\text{Farm bag (F$_b$): } 2.0,\ 64.0,\ 6.0,\ 17.0,\ 35.0,\ 11.0,\ 17.0,\ 13.0,\ 5.0,\ 28.0,\ 10.0,\ 13.0,\ 0.2 \quad (n=13)
+\]
+
+Five-number summaries (min, $Q_1$, median, $Q_3$, max) and IQRs:
+
+\[
+\begin{array}{l|cccccc}
+\text{Sample} & \min & Q_1 & \text{Med} & Q_3 & \max & \text{IQR} \\
+\hline
+\text{U (settled)}   & 4.0  & 5.0  & 11.0 & 34.0 & 80.0  & 29.0 \\
+\text{F (settled)}   & 0.3  & 3.5  & 8.0  & 10.1 & 20.0  & 6.6 \\
+\text{U$_b$ (bag)}   & 13.0 & 24.0 & 34.0 & 42.0 & 104.0 & 18.0 \\
+\text{F$_b$ (bag)}   & 0.2  & 5.5  & 13.0 & 22.5 & 64.0  & 17.0
+\end{array}
+\]
+
+Outlier check via fences $Q_1-1.5(\text{IQR})$ and $Q_3+1.5(\text{IQR})$:
+\[
+\text{U (settled): upper fence }=34.0+1.5(29.0)=77.5 \Rightarrow 80.0 \text{ is a high outlier.}
+\]
+\[
+\text{U$_b$ (bag): upper fence }=42.0+1.5(18.0)=69.0 \Rightarrow 104.0 \text{ is a high outlier.}
+\]
+\[
+\text{F (settled): upper fence }=10.1+1.5(6.6)=20.0 \Rightarrow \text{no outliers (20.0 is on the fence).}
+\]
+\[
+\text{F$_b$ (bag): upper fence }=22.5+1.5(17.0)=48.0 \Rightarrow 64.0 \text{ is a high outlier.}
+\]
+
+\textbf{Comparison (boxplot interpretation):}
+\begin{itemize}
+\item Urban settled dust has much greater spread than farm settled dust and has a high outlier (80).
+\item Dust bag dust samples have higher centers than their corresponding settled-dust samples (especially urban: median 34 vs.\ 11).
+\item Both bag-dust samples show substantial right skew due to high outliers (104 for urban bag, 64 for farm bag).
+\item Overall, the urban measurements tend to be more variable and more influenced by extreme high values than the farm measurements.
+\end{itemize}
+\end{enumerate}
+
+
+\subsection*{Problem 52}
+
+The first four deviations from the sample mean are given as
+\[
+0.3,\ 0.9,\ 1.0,\ 1.3
+\]
+for a sample of size $n=5$.
+
+\begin{enumerate}
+\item \textbf{Fifth deviation}
+
+For any sample, the sum of deviations from the mean is zero:
+\[
+\sum_{i=1}^{n}(x_i-\bar{x})=0.
+\]
+Thus, the fifth deviation is
+\[
+d_5 = -\left(0.3+0.9+1.0+1.3\right) = -3.5.
+\]
+
+\textbf{Answer:} The fifth deviation from the mean is $-3.5$.
+
+\item \textbf{One possible sample}
+
+Choose a convenient mean, for example $\bar{x}=10$. Then the observations are:
+\[
+\begin{aligned}
+x_1 &= 10+0.3 = 10.3,\\
+x_2 &= 10+0.9 = 10.9,\\
+x_3 &= 10+1.0 = 11.0,\\
+x_4 &= 10+1.3 = 11.3,\\
+x_5 &= 10-3.5 = 6.5.
+\end{aligned}
+\]
+
+\textbf{Answer:} One sample with these five deviations is
+\[
+\{10.3,\ 10.9,\ 11.0,\ 11.3,\ 6.5\}.
+\]
+\end{enumerate}
+
+
+\subsection*{Problem 58}
+
+A comparative boxplot is given for the critical dimension measurements from two machines
+(each based on a sample of $n=20$ parts).
+
+\begin{enumerate}
+\item \textbf{Center}
+
+Machine 2 has a noticeably larger median dimension than Machine 1. The median for Machine 2
+appears near about $100$, whereas the median for Machine 1 is several units lower, near about $96$.
+Thus, parts from Machine 2 tend to be larger on average.
+
+\item \textbf{Spread}
+
+Machine 2 exhibits substantially greater variability. Its interquartile range is much wider,
+and its overall range (from minimum to maximum) is also larger than that of Machine 1.
+Machine 1’s box is narrow, indicating relatively consistent part dimensions.
+
+\item \textbf{Shape and outliers}
+
+Machine 1 shows a possible high-end outlier (a single point above the upper whisker),
+suggesting an occasional unusually large measurement.
+Machine 2 does not show clear outliers but appears roughly symmetric or only mildly skewed.
+
+\item \textbf{Overall comparison}
+
+\textbf{Answer:} Machine 2 produces parts with larger typical dimensions but with much greater
+variability. Machine 1 produces more consistent parts, though with at least one possible high
+outlier. The choice between machines would depend on whether tighter dimensional control
+(consistency) or a larger mean dimension is more important.
+\end{enumerate}
+
+
+\subsection*{Problem 76}
+
+Five measures of center are considered: mean, median, trimmed mean, midrange, and midfourth.
+
+\begin{enumerate}
+\item \textbf{Mean}
+
+The sample mean is \emph{not resistant} to outliers. Because it depends on the magnitude of every observation, a single extremely large or small value can substantially change the mean.
+
+\item \textbf{Median}
+
+The median is \emph{resistant} to outliers. It depends only on the middle position(s) of the ordered data, so extreme values at either end have little to no effect unless they alter the order of the middle observations.
+
+\item \textbf{Trimmed mean}
+
+A trimmed mean is \emph{partially resistant} to outliers. By discarding a fixed percentage of the smallest and largest observations, extreme values are removed before averaging. The larger the trimming percentage, the more resistant the trimmed mean is.
+
+\item \textbf{Midrange}
+
+The midrange is \emph{not resistant} to outliers. It is defined as
+\[
+\text{Midrange}=\frac{x_{\min}+x_{\max}}{2},
+\]
+so it depends entirely on the two most extreme observations. Any outlier directly changes the midrange.
+
+\item \textbf{Midfourth}
+
+The midfourth is \emph{resistant} to outliers. It is defined as
+\[
+\text{Midfourth}=\frac{Q_1+Q_3}{2},
+\]
+and since quartiles depend on the central portion of the data, extreme values have little influence on this measure.
+\end{enumerate}
+
+\textbf{Answer:} The median, trimmed mean, and midfourth are resistant to outliers, while the mean and midrange are not.
+
+\subsection*{Problem 78}
+
+Let $x_1,x_2,\ldots,x_n$ be a sample with sample mean $\bar{x}$, sample variance $s^2$, and sample standard deviation $s$.
+
+\begin{enumerate}
+\item[(a)] Let $y_i=x_i-\bar{x}$ for $i=1,\ldots,n$.
+
+First compute the sample mean of the $y_i$'s:
+\[
+\bar{y}=\frac{1}{n}\sum_{i=1}^n y_i
+=\frac{1}{n}\sum_{i=1}^n (x_i-\bar{x})
+=\frac{1}{n}\left(\sum_{i=1}^n x_i - n\bar{x}\right)=0.
+\]
+
+Now compute the sample variance of the $y_i$'s:
+\[
+s_y^2=\frac{1}{n-1}\sum_{i=1}^n (y_i-\bar{y})^2
+=\frac{1}{n-1}\sum_{i=1}^n (y_i-0)^2
+=\frac{1}{n-1}\sum_{i=1}^n (x_i-\bar{x})^2.
+\]
+But by definition,
+\[
+s^2=\frac{1}{n-1}\sum_{i=1}^n (x_i-\bar{x})^2,
+\]
+so
+\[
+s_y^2=s^2 \quad\text{and}\quad s_y=\sqrt{s_y^2}=s.
+\]
+
+\textbf{Answer (a):} Subtracting the mean shifts the data so the new mean is $0$, but the sample variance and sample standard deviation are unchanged: $s_y^2=s^2$ and $s_y=s$.
+
+\item[(b)] Let $z_i=\dfrac{x_i-\bar{x}}{s}$ for $i=1,\ldots,n$.
+
+Compute the sample mean of the $z_i$'s:
+\[
+\bar{z}=\frac{1}{n}\sum_{i=1}^n z_i
+=\frac{1}{n}\sum_{i=1}^n \frac{x_i-\bar{x}}{s}
+=\frac{1}{s}\cdot \frac{1}{n}\sum_{i=1}^n (x_i-\bar{x})=0.
+\]
+
+Compute the sample variance of the $z_i$'s:
+\[
+s_z^2=\frac{1}{n-1}\sum_{i=1}^n (z_i-\bar{z})^2
+=\frac{1}{n-1}\sum_{i=1}^n z_i^2
+=\frac{1}{n-1}\sum_{i=1}^n \left(\frac{x_i-\bar{x}}{s}\right)^2
+=\frac{1}{s^2}\cdot \frac{1}{n-1}\sum_{i=1}^n (x_i-\bar{x})^2.
+\]
+Since $\frac{1}{n-1}\sum_{i=1}^n (x_i-\bar{x})^2=s^2$, we get
+\[
+s_z^2=\frac{1}{s^2}\cdot s^2=1,
+\qquad
+s_z=\sqrt{s_z^2}=1.
+\]
+
+\textbf{Answer (b):} The standardized values $z_i$ have sample mean $0$, sample variance $1$, and sample standard deviation $1$.
+\end{enumerate}
